@@ -1,0 +1,1146 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>El Paso – Restaurant mexican &amp; bar în Chișinău</title>
+<meta name="description" content="El Paso este un restaurant mexican autentic și bar în Chișinău. Fajitas flambate la masa ta, nachos cu salsa din partea casei.">
+<meta name="theme-color" content="#1a1110">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%8C%B6%EF%B8%8F%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Eczar:wght@500;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Rye&display=swap" rel="stylesheet">
+<style>
+/* ---------- Tokens ---------- */
+:root {
+  --bg: #1a1110;
+  --bg-2: #2b1b17;
+  --bg-3: #3a2520;
+  --ink: #f6e7d3;
+  --ink-dim: #c9b4a0;
+  --chili: #d9381e;
+  --amber: #f4a261;
+  --clay: #e76f51;
+  --cactus: #2a9d8f;
+  --fiesta: #e63946;
+  --line: rgba(244, 162, 97, .22);
+  --font-display: "Rye", "Eczar", Georgia, serif;
+  --font-head: "Eczar", Georgia, "Times New Roman", serif;
+  --font-body: "Plus Jakarta Sans", Inter, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --hdr: 64px;
+  color-scheme: dark;
+  box-sizing: border-box;
+  padding-top: env(safe-area-inset-top, 0px);
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+html { scroll-padding-top: calc(env(safe-area-inset-top, 0px) + var(--hdr) + 12px); scroll-behavior: smooth; height: 100%; }
+*, *::before, *::after { box-sizing: border-box; }
+body {
+  margin: 0; min-height: 100%;
+  background-color: var(--bg);
+  background-image:
+    radial-gradient(900px 500px at 85% -5%, rgba(217, 56, 30, .18), transparent 60%),
+    radial-gradient(700px 500px at -5% 40%, rgba(244, 162, 97, .09), transparent 60%);
+  color: var(--ink);
+  font: 400 16px/1.6 var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+img, svg { max-width: 100%; }
+[hidden] { display: none !important; }
+button { font: inherit; color: inherit; cursor: pointer; }
+h1, h2, h3, p { margin: 0; }
+a { color: var(--amber); }
+:focus-visible { outline: 3px solid var(--amber); outline-offset: 3px; border-radius: 6px; }
+.wrap { max-width: 1160px; margin-inline: auto; padding-inline: clamp(16px, 4vw, 32px); }
+.block { padding-block: clamp(56px, 9vw, 104px); }
+.sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+.h2 { font-family: var(--font-head); font-weight: 800; font-size: clamp(34px, 6vw, 58px); line-height: 1.05; letter-spacing: -.01em; }
+.lede { color: var(--ink-dim); max-width: 56ch; margin-top: 12px; }
+
+/* ---------- Buttons ---------- */
+.btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+  border: 0; border-radius: 10px; padding: 12px 20px; min-height: 46px;
+  font-weight: 700; font-size: 15px; text-decoration: none; line-height: 1.1;
+  transition: transform .15s ease, box-shadow .2s ease, background-color .2s ease;
+}
+.btn:active { transform: translateY(1px) scale(.99); }
+.btn-fire { background: var(--chili); color: #fff; box-shadow: 0 6px 22px -6px rgba(217, 56, 30, .7); }
+.btn-fire:hover { box-shadow: 0 0 0 2px rgba(244, 162, 97, .5), 0 8px 34px -4px rgba(217, 56, 30, .95); }
+.btn-ghost { background: transparent; color: var(--ink); border: 2px solid var(--line); }
+.btn-ghost:hover { border-color: var(--amber); box-shadow: 0 0 20px -4px rgba(244, 162, 97, .5); }
+.btn-amber { background: var(--amber); color: #2b1208; }
+.btn-amber:hover { box-shadow: 0 0 26px -2px rgba(244, 162, 97, .8); }
+.btn[disabled] { opacity: .5; cursor: not-allowed; }
+
+/* ---------- Header ---------- */
+.site-head {
+  position: sticky; top: env(safe-area-inset-top, 0px); z-index: 50;
+  height: var(--hdr);
+  background: rgba(26, 17, 16, .9); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--line);
+}
+.site-head .wrap { height: 100%; display: flex; align-items: center; gap: 16px; }
+.logo { font-family: var(--font-display); font-size: 28px; color: var(--amber); text-decoration: none; text-shadow: 2px 2px 0 var(--chili); letter-spacing: .02em; }
+.nav { display: flex; gap: 6px; margin-left: 24px; }
+.nav a { color: var(--ink); text-decoration: none; padding: 8px 12px; border-radius: 8px; font-weight: 600; font-size: 15px; }
+.nav a:hover { background: var(--bg-2); color: var(--amber); }
+.head-actions { margin-left: auto; display: flex; align-items: center; gap: 10px; }
+.icon-btn { position: relative; width: 46px; height: 46px; border-radius: 12px; border: 2px solid var(--line); background: transparent; display: grid; place-items: center; }
+.icon-btn:hover { border-color: var(--amber); }
+.icon-btn svg { width: 22px; height: 22px; }
+.badge { position: absolute; top: -7px; right: -7px; min-width: 22px; height: 22px; padding: 0 6px; border-radius: 999px; background: var(--chili); color: #fff; font-size: 12px; font-weight: 700; display: grid; place-items: center; transform: scale(0); transition: transform .2s cubic-bezier(.3, 1.8, .5, 1); }
+.badge.on { transform: scale(1); }
+.burger { display: none; }
+
+/* ---------- Hero ---------- */
+.hero { position: relative; overflow: hidden; padding: 128px 0 72px; }
+.bunting { position: absolute; left: 0; top: 0; width: 100%; height: 112px; pointer-events: none; animation: drop 1s cubic-bezier(.2, .9, .3, 1.15) both; }
+@keyframes drop { from { transform: translateY(-120%); } to { transform: none; } }
+.flag { transform-box: fill-box; transform-origin: 50% 0; animation: sway 3.6s ease-in-out infinite alternate; }
+@keyframes sway { from { transform: rotate(-3.5deg); } to { transform: rotate(3.5deg); } }
+.hero-grid { display: grid; grid-template-columns: 1.25fr .75fr; gap: 40px; align-items: center; }
+.wordmark { font-family: var(--font-display); font-weight: 400; font-size: clamp(76px, 16vw, 176px); line-height: .88; color: var(--amber); text-shadow: 5px 5px 0 var(--chili), 9px 9px 0 rgba(0, 0, 0, .35); letter-spacing: .01em; }
+.hero-sub { font-family: var(--font-head); font-weight: 700; font-size: clamp(22px, 3.4vw, 34px); line-height: 1.2; margin-top: 22px; }
+.hero p.copy { color: var(--ink-dim); max-width: 46ch; margin-top: 14px; font-size: 17px; }
+.cta-row { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
+
+.ticket { position: relative; justify-self: center; width: min(100%, 320px); background: var(--ink); color: #2b1208; padding: 26px 24px 24px; transform: rotate(-3deg); border-radius: 6px; box-shadow: 0 28px 60px -18px rgba(0, 0, 0, .8); transition: transform .3s ease; }
+.ticket:hover { transform: rotate(0deg) scale(1.02); }
+.ticket::before, .ticket::after { content: ""; position: absolute; top: 50%; width: 26px; height: 26px; border-radius: 50%; background: var(--bg); transform: translateY(-50%); }
+.ticket::before { left: -13px; }
+.ticket::after { right: -13px; }
+.ticket-in { border: 2px dashed rgba(43, 18, 8, .45); padding: 18px 14px; text-align: center; }
+.ticket .t1 { font-weight: 700; font-size: 15px; }
+.ticket .t2 { font-family: var(--font-display); font-size: 42px; line-height: 1; color: var(--chili); margin: 10px 0; }
+.ticket .t3 { font-size: 14px; line-height: 1.45; }
+.ticket .chip-emoji { font-size: 38px; display: block; margin-bottom: 4px; }
+
+.facts { display: grid; grid-template-columns: repeat(3, 1fr); margin-top: 64px; border: 1px solid var(--line); border-radius: 14px; overflow: hidden; background: rgba(43, 27, 23, .6); }
+.fact { padding: 20px 22px; }
+.fact + .fact { border-left: 1px solid var(--line); }
+.fact b { display: block; font-family: var(--font-head); font-size: 20px; font-weight: 700; color: var(--amber); }
+.fact span { color: var(--ink-dim); font-size: 14px; }
+
+/* zigzag divider */
+.zig { height: 18px; background-color: var(--chili);
+  background-image: linear-gradient(135deg, var(--bg) 25%, transparent 25%), linear-gradient(225deg, var(--bg) 25%, transparent 25%);
+  background-size: 24px 24px; background-position: -12px 0; }
+
+/* ---------- Menu ---------- */
+.menu-nav { position: sticky; top: calc(env(safe-area-inset-top, 0px) + var(--hdr)); z-index: 30; background: rgba(26, 17, 16, .95); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); margin: 28px calc(-1 * clamp(16px, 4vw, 32px)) 0; padding: 12px clamp(16px, 4vw, 32px) 10px; border-bottom: 1px solid var(--line); }
+.tabs { display: flex; gap: 8px; overflow-x: auto; padding-bottom: 6px; scrollbar-width: none; }
+.tabs::-webkit-scrollbar { display: none; }
+.tab { flex: none; padding: 9px 16px; border-radius: 999px; border: 2px solid var(--line); background: transparent; font-weight: 600; font-size: 14.5px; white-space: nowrap; transition: background-color .2s, box-shadow .2s, border-color .2s; }
+.tab:hover { border-color: var(--amber); box-shadow: 0 0 18px -4px rgba(244, 162, 97, .6); }
+.tab[aria-pressed="true"] { background: var(--chili); border-color: var(--chili); color: #fff; box-shadow: 0 0 22px -4px rgba(217, 56, 30, .9); }
+.filters { display: flex; flex-wrap: wrap; gap: 8px 14px; align-items: center; margin-top: 10px; }
+.seg { display: inline-flex; border: 2px solid var(--line); border-radius: 999px; overflow: hidden; }
+.seg button { border: 0; background: transparent; padding: 6px 12px; font-size: 13.5px; font-weight: 600; }
+.seg button + button { border-left: 1px solid var(--line); }
+.seg button[aria-pressed="true"] { background: var(--bg-3); color: var(--amber); }
+.seg-label { font-size: 13.5px; color: var(--ink-dim); font-weight: 600; }
+.toggle { display: inline-flex; align-items: center; gap: 8px; border: 2px solid var(--line); background: transparent; border-radius: 999px; padding: 6px 13px; font-size: 13.5px; font-weight: 600; }
+.toggle .dot { width: 10px; height: 10px; border-radius: 50%; border: 2px solid var(--ink-dim); }
+.toggle[aria-pressed="true"] { border-color: var(--cactus); color: #fff; background: rgba(42, 157, 143, .18); }
+.toggle[aria-pressed="true"] .dot { background: var(--cactus); border-color: var(--cactus); }
+.toggle.chef[aria-pressed="true"] { border-color: var(--amber); background: rgba(244, 162, 97, .16); }
+.toggle.chef[aria-pressed="true"] .dot { background: var(--amber); border-color: var(--amber); }
+.subs { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+.subs button { border: 2px solid var(--line); background: transparent; border-radius: 8px; padding: 5px 12px; font-size: 13.5px; font-weight: 600; }
+.subs button[aria-pressed="true"] { background: var(--bg-3); border-color: var(--amber); color: var(--amber); }
+.subs button[disabled] { border-style: dashed; opacity: .45; cursor: not-allowed; }
+.count { color: var(--ink-dim); font-size: 14px; margin: 18px 0 4px; min-height: 22px; }
+
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 290px), 1fr)); gap: 18px; margin-top: 12px; }
+.dish { display: flex; flex-direction: column; background: var(--bg-2); border: 1px solid var(--line); border-radius: 16px; overflow: hidden; transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease; }
+.dish:hover { transform: translateY(-4px); border-color: rgba(244, 162, 97, .65); box-shadow: 0 0 0 1px rgba(244, 162, 97, .35), 0 18px 44px -14px rgba(217, 56, 30, .75); }
+.tile { height: 92px; display: grid; place-items: center; font-size: 46px; position: relative; background: linear-gradient(135deg, var(--t1, #5a2a1e), var(--t2, #2b1b17)); }
+.tile span { display: block; transition: transform .3s cubic-bezier(.3, 1.6, .5, 1); filter: drop-shadow(0 6px 10px rgba(0, 0, 0, .45)); }
+.dish:hover .tile span { transform: scale(1.18) rotate(-6deg); }
+.tile::after { content: ""; position: absolute; inset: auto 0 0 0; height: 6px; background: repeating-linear-gradient(90deg, var(--amber) 0 12px, var(--chili) 12px 24px, var(--cactus) 24px 36px); opacity: .85; }
+.t-appetizers { --t1: #7a3a1c; --t2: #2b1b17; }
+.t-tacos { --t1: #6b2a1e; --t2: #2b1b17; }
+.t-fajitas { --t1: #9c2a14; --t2: #2b1b17; }
+.t-mains { --t1: #5d2a2a; --t2: #2b1b17; }
+.t-salads { --t1: #1f5c54; --t2: #2b1b17; }
+.t-soups { --t1: #7a4a1c; --t2: #2b1b17; }
+.t-desserts { --t1: #7c2e52; --t2: #2b1b17; }
+.dish-body { padding: 16px 18px 18px; display: flex; flex-direction: column; gap: 10px; flex: 1; }
+.dish h3 { font-family: var(--font-head); font-weight: 700; font-size: 22px; line-height: 1.15; }
+.dish .desc { color: var(--ink-dim); font-size: 14.5px; line-height: 1.5; }
+.tags { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; }
+.tag { font-size: 12px; font-weight: 700; padding: 2px 9px; border-radius: 999px; border: 1px solid; }
+.tag.veg { color: #7fe0d3; border-color: var(--cactus); background: rgba(42, 157, 143, .16); }
+.tag.chef { color: var(--amber); border-color: var(--amber); background: rgba(244, 162, 97, .14); }
+.tag.flame { color: #ff9aa2; border-color: var(--fiesta); background: rgba(230, 57, 70, .16); }
+.tag.gift { color: #2b1208; background: var(--amber); border-color: var(--amber); }
+.chilis { font-size: 14px; letter-spacing: 1px; }
+.chilis .off { filter: grayscale(1); opacity: .28; }
+.mild { font-size: 12px; color: var(--ink-dim); }
+.vars { display: flex; flex-wrap: wrap; gap: 6px; }
+.vars button { border: 2px solid var(--line); background: transparent; border-radius: 8px; padding: 4px 10px; font-size: 13px; font-weight: 600; }
+.vars button:hover { border-color: var(--amber); }
+.vars button[aria-pressed="true"] { background: var(--amber); color: #2b1208; border-color: var(--amber); }
+.dish-foot { margin-top: auto; padding-top: 6px; display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+.price { font-weight: 700; font-size: 22px; color: var(--amber); white-space: nowrap; }
+.price small { font-size: 13px; font-weight: 600; color: var(--ink-dim); margin-left: 3px; }
+.price.free { color: var(--cactus); font-size: 17px; }
+.gram { font-size: 12.5px; color: var(--ink-dim); }
+.add { padding: 9px 14px; min-height: 42px; font-size: 14px; }
+.add.added { background: var(--cactus); box-shadow: none; }
+.empty { grid-column: 1 / -1; background: var(--bg-2); border: 2px dashed var(--line); border-radius: 16px; padding: 36px 24px; text-align: center; }
+.empty h3 { font-family: var(--font-head); font-size: 26px; }
+.empty p { color: var(--ink-dim); margin: 8px auto 18px; max-width: 46ch; }
+
+/* ---------- Flambé ---------- */
+.flambe { position: relative; overflow: hidden; background: linear-gradient(180deg, var(--bg) 0, #120a08 18%, #120a08 82%, var(--bg) 100%); }
+.flambe::before { content: ""; position: absolute; inset: 0; background: radial-gradient(600px 420px at 72% 58%, rgba(217, 56, 30, .5), transparent 70%); opacity: 0; transition: opacity .8s ease; pointer-events: none; }
+.flambe.lit::before { opacity: 1; }
+.flambe-grid { position: relative; display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; }
+.steps { list-style: none; padding: 0; margin: 26px 0 0; display: grid; gap: 14px; counter-reset: s; }
+.steps li { counter-increment: s; display: grid; grid-template-columns: 40px 1fr; gap: 14px; align-items: start; }
+.steps li::before { content: counter(s); width: 40px; height: 40px; border-radius: 50%; background: var(--chili); color: #fff; font-family: var(--font-display); display: grid; place-items: center; font-size: 18px; }
+.steps b { display: block; font-size: 17px; }
+.steps span { color: var(--ink-dim); font-size: 14.5px; }
+.pan-wrap { position: relative; }
+.pan { width: 100%; height: auto; display: block; cursor: pointer; overflow: visible; }
+.pan-glow { opacity: .15; transition: opacity .8s ease; }
+.lit .pan-glow { opacity: 1; }
+.flames { transform-box: fill-box; transform-origin: 50% 100%; transform: scaleY(.1); opacity: 0; transition: transform .6s cubic-bezier(.2, 1.4, .4, 1), opacity .5s ease; }
+.lit .flames { transform: scaleY(1); opacity: 1; }
+.flame { transform-box: fill-box; transform-origin: 50% 100%; animation: flick var(--t, .7s) ease-in-out var(--d, 0s) infinite alternate; }
+@keyframes flick { from { transform: scale(1, .86) skewX(-4deg); } to { transform: scale(.93, 1.14) skewX(5deg); } }
+.spark { opacity: 0; }
+.lit .spark { animation: spark 1.8s ease-out var(--d, 0s) infinite; }
+@keyframes spark { 0% { opacity: 0; transform: translateY(0); } 15% { opacity: 1; } 100% { opacity: 0; transform: translateY(-120px); } }
+.food { transform-box: fill-box; transform-origin: center; }
+.lit .food { animation: sizzle .35s ease-in-out var(--d, 0s) infinite alternate; }
+@keyframes sizzle { from { transform: translateY(0); } to { transform: translateY(-1.6px); } }
+.light-row { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
+
+/* ---------- Reviews ---------- */
+.rev-top { display: grid; grid-template-columns: auto 1fr; gap: 28px 44px; align-items: end; margin-bottom: 36px; }
+.score { display: flex; align-items: baseline; gap: 14px; flex-wrap: wrap; }
+.score b { font-family: var(--font-display); font-size: 72px; line-height: 1; color: var(--amber); font-weight: 400; }
+.stars { color: var(--amber); letter-spacing: 2px; font-size: 18px; }
+.score small { display: block; color: var(--ink-dim); font-size: 14px; }
+.bars { display: grid; gap: 8px; min-width: min(100%, 320px); }
+.bar { display: grid; grid-template-columns: 110px 1fr 52px; gap: 10px; align-items: center; font-size: 14px; }
+.bar i { display: block; height: 8px; border-radius: 99px; background: var(--bg-3); overflow: hidden; }
+.bar i::after { content: ""; display: block; height: 100%; width: var(--w); background: linear-gradient(90deg, var(--chili), var(--amber)); border-radius: 99px; }
+.bar em { font-style: normal; color: var(--ink-dim); text-align: right; }
+
+.car { position: relative; border: 1px solid var(--line); border-radius: 20px; background: linear-gradient(135deg, var(--bg-2), #21130f); overflow: hidden; touch-action: pan-y; }
+.car-track { display: flex; transition: transform .55s cubic-bezier(.3, .8, .3, 1); }
+.slide { flex: 0 0 100%; padding: clamp(28px, 5vw, 56px) clamp(22px, 6vw, 72px) 84px; min-height: 340px; }
+.slide h3 { font-family: var(--font-head); font-weight: 800; font-size: clamp(22px, 3vw, 30px); color: var(--amber); }
+.slide blockquote { margin: 18px 0 0; font-family: var(--font-head); font-weight: 500; font-size: clamp(24px, 4vw, 40px); line-height: 1.22; max-width: 26em; }
+.slide .tr { color: var(--ink-dim); font-size: 14.5px; margin-top: 12px; max-width: 60ch; }
+.slide .who { margin-top: 22px; display: flex; align-items: center; gap: 12px; font-weight: 700; }
+.car-ctl { position: absolute; left: clamp(22px, 6vw, 72px); right: clamp(22px, 6vw, 72px); bottom: 24px; display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+.dots { display: flex; gap: 8px; }
+.dots button { width: 12px; height: 12px; border-radius: 50%; border: 0; background: var(--bg-3); padding: 0; transition: width .25s, background-color .25s; }
+.dots button[aria-current="true"] { width: 34px; border-radius: 99px; background: var(--chili); }
+.arrows { display: flex; gap: 8px; }
+.arrows button { width: 44px; height: 44px; border-radius: 50%; border: 2px solid var(--line); background: transparent; display: grid; place-items: center; font-size: 18px; }
+.arrows button:hover { border-color: var(--amber); box-shadow: 0 0 18px -3px rgba(244, 162, 97, .6); }
+
+.wall-head { display: flex; flex-wrap: wrap; gap: 14px 20px; align-items: center; justify-content: space-between; margin: 56px 0 20px; }
+.wall-head h3 { font-family: var(--font-head); font-size: 30px; font-weight: 800; }
+.wall { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 320px), 1fr)); gap: 16px; }
+.rev { background: var(--bg-2); border: 1px solid var(--line); border-radius: 14px; padding: 20px; display: flex; flex-direction: column; gap: 12px; transition: border-color .2s, box-shadow .2s; }
+.rev:hover { border-color: rgba(244, 162, 97, .6); box-shadow: 0 12px 32px -14px rgba(217, 56, 30, .7); }
+.rev-h { display: flex; align-items: center; gap: 12px; }
+.av { width: 42px; height: 42px; border-radius: 50%; display: grid; place-items: center; font-weight: 700; color: #fff; flex: none; }
+.rev-h b { display: block; line-height: 1.2; }
+.rev .stars { font-size: 14px; }
+.rev p { font-size: 15.5px; }
+.rev .tr { color: var(--ink-dim); font-size: 13.5px; margin-top: -4px; }
+.rev-tags { margin-top: auto; display: flex; gap: 6px; flex-wrap: wrap; }
+.rev-tags span { font-size: 12px; font-weight: 600; color: var(--ink-dim); border: 1px solid var(--line); padding: 2px 9px; border-radius: 999px; }
+
+/* ---------- Visit ---------- */
+.visit-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: stretch; }
+.info { list-style: none; padding: 0; margin: 26px 0 0; display: grid; gap: 18px; }
+.info li { display: grid; grid-template-columns: 30px 1fr; gap: 12px; }
+.info svg { width: 24px; height: 24px; color: var(--amber); margin-top: 2px; }
+.info b { display: block; }
+.info span, .info a { color: var(--ink-dim); }
+.info a { color: var(--amber); }
+.info .todo { color: var(--ink-dim); font-style: italic; }
+.deliver { margin-top: 26px; padding: 18px; border: 1px solid var(--line); border-radius: 14px; background: var(--bg-2); }
+.deliver p { font-weight: 700; margin-bottom: 12px; }
+.deliver .row { display: flex; gap: 10px; flex-wrap: wrap; }
+.map { position: relative; border-radius: 18px; overflow: hidden; border: 1px solid var(--line); min-height: 340px; background: #1c110e; }
+.map svg { width: 100%; height: 100%; display: block; min-height: 340px; }
+.map .cap { position: absolute; left: 14px; bottom: 14px; right: 14px; display: flex; justify-content: space-between; align-items: center; gap: 10px; flex-wrap: wrap; }
+.pulse { transform-box: fill-box; transform-origin: center; animation: pulse 2.2s ease-out infinite; }
+@keyframes pulse { from { transform: scale(.4); opacity: .9; } to { transform: scale(2.6); opacity: 0; } }
+
+.foot { border-top: 1px solid var(--line); padding: 32px 0 44px; color: var(--ink-dim); font-size: 14px; }
+.foot .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; }
+
+/* ---------- Drawer ---------- */
+.veil { position: fixed; inset: 0; background: rgba(0, 0, 0, .6); opacity: 0; visibility: hidden; transition: opacity .25s, visibility 0s .25s; z-index: 80; }
+.veil.on { opacity: 1; visibility: visible; transition: opacity .25s; }
+.drawer { position: fixed; top: 0; right: 0; bottom: 0; width: min(430px, 100%); z-index: 90; background: var(--bg-2); border-left: 1px solid var(--line); display: flex; flex-direction: column; visibility: hidden; transform: translateX(100%); transition: transform .3s ease, visibility 0s .3s; padding-top: env(safe-area-inset-top, 0px); padding-bottom: env(safe-area-inset-bottom, 0px); }
+.drawer.on { visibility: visible; transform: none; transition: transform .3s ease; }
+.dr-head { display: flex; align-items: center; justify-content: space-between; padding: 18px 20px; border-bottom: 1px solid var(--line); }
+.dr-head h2 { font-family: var(--font-head); font-size: 28px; font-weight: 800; }
+.dr-list { flex: 1; overflow-y: auto; padding: 8px 20px; }
+.line { display: grid; grid-template-columns: 1fr auto; gap: 4px 12px; padding: 14px 0; border-bottom: 1px solid var(--line); }
+.line b { font-weight: 700; }
+.line small { color: var(--ink-dim); display: block; }
+.line .lp { font-weight: 700; color: var(--amber); text-align: right; }
+.qty { display: inline-flex; align-items: center; gap: 4px; margin-top: 8px; }
+.qty button { width: 32px; height: 32px; border-radius: 8px; border: 2px solid var(--line); background: transparent; font-weight: 700; }
+.qty button:hover { border-color: var(--amber); }
+.qty output { min-width: 28px; text-align: center; font-weight: 700; }
+.rm { justify-self: end; align-self: end; background: none; border: 0; color: var(--ink-dim); text-decoration: underline; font-size: 13px; padding: 4px; }
+.dr-foot { padding: 16px 20px 20px; border-top: 1px solid var(--line); display: grid; gap: 10px; background: #231510; }
+.total { display: flex; justify-content: space-between; font-size: 18px; font-weight: 700; }
+.total span:last-child { color: var(--amber); }
+.dr-note { color: var(--ink-dim); font-size: 13px; }
+.dr-empty { text-align: center; padding: 48px 12px; color: var(--ink-dim); }
+.dr-empty p { margin-bottom: 18px; }
+
+/* ---------- Dialog ---------- */
+dialog { border: 1px solid var(--line); border-radius: 20px; background: var(--bg-2); color: var(--ink); padding: 0; width: min(560px, calc(100% - 24px)); max-height: calc(100% - 24px); overflow: auto; box-shadow: 0 40px 100px -20px rgba(0, 0, 0, .9); }
+dialog::backdrop { background: rgba(10, 5, 4, .78); backdrop-filter: blur(3px); }
+dialog[open] { animation: pop .28s cubic-bezier(.3, 1.4, .5, 1); }
+@keyframes pop { from { transform: scale(.94) translateY(10px); opacity: 0; } to { transform: none; opacity: 1; } }
+.dlg-in { padding: 26px clamp(20px, 4vw, 32px) 28px; }
+.dlg-top { display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; }
+.dlg-top h2 { font-family: var(--font-head); font-size: 32px; font-weight: 800; line-height: 1.1; }
+.x { width: 40px; height: 40px; border-radius: 10px; border: 2px solid var(--line); background: transparent; font-size: 20px; line-height: 1; flex: none; }
+.x:hover { border-color: var(--amber); }
+.form { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 20px; }
+.f { display: grid; gap: 6px; }
+.f.full { grid-column: 1 / -1; }
+.f label { font-size: 14px; font-weight: 600; }
+.f input, .f select, .f textarea { width: 100%; font: inherit; color: var(--ink); background: var(--bg); border: 2px solid var(--line); border-radius: 10px; padding: 11px 12px; min-height: 46px; }
+.f textarea { resize: vertical; min-height: 88px; }
+.f input:focus, .f select:focus, .f textarea:focus { outline: none; border-color: var(--amber); box-shadow: 0 0 0 3px rgba(244, 162, 97, .25); }
+.f.bad input, .f.bad select { border-color: var(--fiesta); }
+.err { color: #ff9aa2; font-size: 13px; min-height: 0; }
+.step { display: flex; align-items: center; gap: 10px; }
+.step button { width: 46px; height: 46px; border-radius: 10px; border: 2px solid var(--line); background: transparent; font-size: 20px; font-weight: 700; }
+.step button:hover { border-color: var(--amber); }
+.step output { min-width: 40px; text-align: center; font-size: 20px; font-weight: 700; }
+.note { grid-column: 1 / -1; display: grid; grid-template-columns: 26px 1fr; gap: 10px; padding: 12px 14px; border-radius: 10px; background: rgba(244, 162, 97, .1); border: 1px dashed var(--amber); font-size: 14px; }
+.ok { text-align: center; padding: 18px 0 4px; }
+.ok .big { font-size: 56px; }
+.ok h2 { font-family: var(--font-head); font-size: 32px; margin: 8px 0; }
+.ok p { color: var(--ink-dim); }
+.ok .btn { margin-top: 20px; }
+
+.toast { position: fixed; left: 50%; bottom: calc(22px + env(safe-area-inset-bottom, 0px)); transform: translate(-50%, 30px); background: var(--ink); color: #2b1208; padding: 12px 18px; border-radius: 12px; font-weight: 700; font-size: 14.5px; opacity: 0; pointer-events: none; transition: transform .25s, opacity .25s; z-index: 200; max-width: calc(100% - 32px); box-shadow: 0 16px 40px -10px rgba(0, 0, 0, .8); }
+.toast.on { opacity: 1; transform: translate(-50%, 0); }
+
+/* ---------- Responsive ---------- */
+@media (max-width: 860px) {
+  .burger { display: grid; }
+  .nav { position: absolute; top: var(--hdr); left: 0; right: 0; margin: 0; flex-direction: column; background: var(--bg-2); border-bottom: 1px solid var(--line); padding: 8px 16px 14px; display: none; }
+  .nav.on { display: flex; }
+  .nav a { padding: 12px; }
+  .hero { padding-top: 120px; }
+  .hero-grid, .flambe-grid, .visit-grid, .rev-top { grid-template-columns: 1fr; }
+  .ticket { margin-top: 16px; }
+  .facts { grid-template-columns: 1fr; }
+  .fact + .fact { border-left: 0; border-top: 1px solid var(--line); }
+  .pan-wrap { order: -1; }
+}
+@media (max-width: 520px) {
+  .head-actions .btn { padding: 10px 14px; }
+  .form { grid-template-columns: 1fr; }
+  .bar { grid-template-columns: 96px 1fr 44px; }
+  .slide { min-height: 380px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
+}
+</style>
+</head>
+<body>
+
+<header class="site-head">
+  <div class="wrap">
+    <a class="logo" href="#top" aria-label="El Paso, acasă">El Paso</a>
+    <nav class="nav" id="nav" aria-label="Navigare principală">
+      <a href="#menu">Meniu</a>
+      <a href="#flambe">Flambat</a>
+      <a href="#reviews">Recenzii</a>
+      <a href="#visit">Contact</a>
+    </nav>
+    <div class="head-actions">
+      <button class="btn btn-fire" data-open-resv type="button">Rezervă</button>
+      <button class="icon-btn" id="cartBtn" type="button" aria-label="Deschide comanda">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 7h12l-1 12a2 2 0 0 1-2 1.8H9A2 2 0 0 1 7 19L6 7Z"/><path d="M9 7a3 3 0 0 1 6 0"/></svg>
+        <span class="badge" id="cartCount">0</span>
+      </button>
+      <button class="icon-btn burger" id="burger" type="button" aria-label="Deschide navigarea" aria-expanded="false" aria-controls="nav">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+  <!-- HERO -->
+  <section class="hero" aria-labelledby="h1">
+    <svg class="bunting" id="bunting" aria-hidden="true" focusable="false"></svg>
+    <div class="wrap">
+      <div class="hero-grid">
+        <div>
+          <h1 class="wordmark" id="h1">El Paso</h1>
+          <p class="hero-sub">Restaurant mexican și bar în Chișinău</p>
+          <p class="copy">Lumini calde, ornamente și picturi mexicane și un meniu atât de mare încât vei reveni. Fiecare masă începe cu nachos și salsa de casă, din partea noastră.</p>
+          <div class="cta-row">
+            <a class="btn btn-fire" href="#menu">Vezi meniul</a>
+            <button class="btn btn-ghost" data-open-resv type="button">Rezervă o masă</button>
+          </div>
+        </div>
+        <aside class="ticket" aria-label="Nachos cu salsa gratuiți la sosire">
+          <div class="ticket-in">
+            <span class="chip-emoji" aria-hidden="true">🌽</span>
+            <p class="t1">Nachos cu salsa</p>
+            <p class="t2">Din partea casei</p>
+            <p class="t3">Serviți la sosire, cu salsa noastră de casă.</p>
+          </div>
+        </aside>
+      </div>
+      <div class="facts">
+        <div class="fact"><b>Fajitas flambate la masa ta</b><span>Cu pui, miel, somon sau mixte.</span></div>
+        <div class="fact"><b>Nachos cu salsa sunt gratuiți</b><span>Un coș de bun venit la fiecare vizită.</span></div>
+        <div class="fact"><b>Livrare în Chișinău</b><span>Comandă prin Straus sau Foodhouse.</span></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="zig" aria-hidden="true"></div>
+
+  <!-- MENU -->
+  <section class="block" id="menu" aria-labelledby="menuH">
+    <div class="wrap">
+      <h2 class="h2" id="menuH">Meniul</h2>
+      <p class="lede">Prețurile sunt în MDL. Adaugă preparatele în comandă, apoi trimite lista unui partener de livrare sau spune-o la masă.</p>
+
+      <div class="menu-nav">
+        <div class="tabs" id="tabs" role="group" aria-label="Categorii de meniu"></div>
+        <div class="filters">
+          <span class="seg-label" id="spiceLbl">Picant</span>
+          <div class="seg" id="spice" role="group" aria-labelledby="spiceLbl"></div>
+          <button class="toggle" id="fVeg" type="button" aria-pressed="false"><span class="dot"></span>Vegetarian</button>
+          <button class="toggle chef" id="fChef" type="button" aria-pressed="false"><span class="dot"></span>Specialitățile bucătarului</button>
+        </div>
+        <div class="subs" id="subs" role="group" aria-label="Tip de fel principal" hidden></div>
+      </div>
+
+      <p class="count" id="count" role="status" aria-live="polite"></p>
+      <div class="grid" id="grid"></div>
+    </div>
+  </section>
+
+  <!-- FLAMBE -->
+  <section class="block flambe" id="flambe" aria-labelledby="flH">
+    <div class="wrap flambe-grid">
+      <div>
+        <h2 class="h2" id="flH">Fajitas flambate la masa ta</h2>
+        <p class="lede">Tigaia ajunge zgomotoasă, fierbinte și plină de culoare. Apoi flăcările se ridică chiar lângă tine.</p>
+        <ol class="steps">
+          <li><div><b>Ajunge sfârâind</b><span>Ardei, ceapă și carnea sau somonul ales, încă sfârâind.</span></div></li>
+          <li><div><b>Flăcările se ridică la masă</b><span>Ospătarul flambează tigaia sub ochii tăi.</span></div></li>
+          <li><div><b>Rulează și mănâncă</b><span>Compune-ți singur tortilla, cu salsa.</span></div></li>
+        </ol>
+        <div class="light-row">
+          <button class="btn btn-fire" id="lightBtn" type="button" aria-pressed="false">Aprinde tigaia</button>
+          <button class="btn btn-ghost" id="goFaj" type="button">Vezi fajitas de la <span id="fajFrom">195 MDL</span></button>
+        </div>
+      </div>
+      <div class="pan-wrap">
+        <svg class="pan" id="pan" viewBox="0 0 520 380" role="img" aria-label="O tigaie de fajitas cu flăcări care se ridică">
+          <defs>
+            <linearGradient id="flameG" x1="0" y1="1" x2="0" y2="0">
+              <stop offset="0" stop-color="#ffd166"/>
+              <stop offset=".35" stop-color="#f4a261"/>
+              <stop offset=".7" stop-color="#e76f51"/>
+              <stop offset="1" stop-color="#d9381e"/>
+            </linearGradient>
+            <radialGradient id="glow" cx=".5" cy=".55" r=".5">
+              <stop offset="0" stop-color="#f4a261" stop-opacity=".6"/>
+              <stop offset=".5" stop-color="#d9381e" stop-opacity=".25"/>
+              <stop offset="1" stop-color="#d9381e" stop-opacity="0"/>
+            </radialGradient>
+            <linearGradient id="metal" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#4a2f28"/>
+              <stop offset="1" stop-color="#150b09"/>
+            </linearGradient>
+          </defs>
+          <ellipse class="pan-glow" cx="260" cy="230" rx="250" ry="170" fill="url(#glow)"/>
+          <ellipse cx="260" cy="338" rx="190" ry="14" fill="#000" opacity=".4"/>
+          <path d="M420 276 L508 292 L504 310 L412 296 Z" fill="url(#metal)" stroke="#5a382f" stroke-width="2"/>
+          <ellipse cx="250" cy="284" rx="184" ry="54" fill="url(#metal)" stroke="#5a382f" stroke-width="4"/>
+          <ellipse cx="250" cy="278" rx="162" ry="40" fill="#1f110e"/>
+          <g>
+            <ellipse class="food" style="--d:.0s" cx="160" cy="276" rx="26" ry="8" fill="#8a4a2f"/>
+            <ellipse class="food" style="--d:.1s" cx="205" cy="288" rx="24" ry="7" fill="#d9381e"/>
+            <ellipse class="food" style="--d:.05s" cx="250" cy="274" rx="28" ry="8" fill="#2a9d8f"/>
+            <ellipse class="food" style="--d:.15s" cx="298" cy="288" rx="24" ry="7" fill="#f4a261"/>
+            <ellipse class="food" style="--d:.08s" cx="336" cy="274" rx="26" ry="8" fill="#8a4a2f"/>
+            <ellipse class="food" style="--d:.12s" cx="230" cy="292" rx="20" ry="6" fill="#e9c6a0" opacity=".85"/>
+            <ellipse class="food" style="--d:.03s" cx="278" cy="266" rx="18" ry="6" fill="#d9381e"/>
+            <ellipse class="food" style="--d:.18s" cx="184" cy="266" rx="16" ry="5" fill="#2a9d8f"/>
+          </g>
+          <g class="flames">
+            <g transform="translate(150 276) scale(.75)"><path class="flame" style="--d:.05s;--t:.62s" d="M0 0C-16-20-14-46 0-78C6-56 18-40 14-20C12-8 6 0 0 0Z" fill="url(#flameG)"/></g>
+            <g transform="translate(192 274) scale(1.05)"><path class="flame" style="--d:.2s;--t:.74s" d="M0 0C-16-20-14-46 0-78C6-56 18-40 14-20C12-8 6 0 0 0Z" fill="url(#flameG)"/><path class="flame" style="--d:.1s;--t:.5s" d="M0 0C-8-10-7-24 0-40C4-28 9-20 7-10Z" fill="#ffe8a8"/></g>
+            <g transform="translate(228 272) scale(1.3)"><path class="flame" style="--d:.0s;--t:.8s" d="M0 0C-16-20-14-46 0-78C6-56 18-40 14-20C12-8 6 0 0 0Z" fill="url(#flameG)"/><path class="flame" style="--d:.15s;--t:.55s" d="M0 0C-8-10-7-24 0-40C4-28 9-20 7-10Z" fill="#ffe8a8"/></g>
+            <g transform="translate(266 270) scale(1.55)"><path class="flame" style="--d:.12s;--t:.9s" d="M0 0C-16-20-14-46 0-78C6-56 18-40 14-20C12-8 6 0 0 0Z" fill="url(#flameG)"/><path class="flame" style="--d:.0s;--t:.6s" d="M0 0C-8-10-7-24 0-40C4-28 9-20 7-10Z" fill="#ffe8a8"/></g>
+            <g transform="translate(304 272) scale(1.2)"><path class="flame" style="--d:.28s;--t:.7s" d="M0 0C-16-20-14-46 0-78C6-56 18-40 14-20C12-8 6 0 0 0Z" fill="url(#flameG)"/><path class="flame" style="--d:.05s;--t:.52s" d="M0 0C-8-10-7-24 0-40C4-28 9-20 7-10Z" fill="#ffe8a8"/></g>
+            <g transform="translate(340 274) scale(.95)"><path class="flame" style="--d:.1s;--t:.66s" d="M0 0C-16-20-14-46 0-78C6-56 18-40 14-20C12-8 6 0 0 0Z" fill="url(#flameG)"/></g>
+            <g transform="translate(372 278) scale(.65)"><path class="flame" style="--d:.3s;--t:.58s" d="M0 0C-16-20-14-46 0-78C6-56 18-40 14-20C12-8 6 0 0 0Z" fill="url(#flameG)"/></g>
+          </g>
+          <g fill="#ffd166">
+            <circle class="spark" style="--d:0s" cx="200" cy="170" r="2.5"/>
+            <circle class="spark" style="--d:.5s" cx="250" cy="150" r="2"/>
+            <circle class="spark" style="--d:1s" cx="290" cy="165" r="3"/>
+            <circle class="spark" style="--d:.3s" cx="325" cy="180" r="2"/>
+            <circle class="spark" style="--d:.8s" cx="170" cy="190" r="2"/>
+            <circle class="spark" style="--d:1.3s" cx="270" cy="140" r="2.5"/>
+          </g>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <!-- REVIEWS -->
+  <section class="block" id="reviews" aria-labelledby="revH">
+    <div class="wrap">
+      <div class="rev-top">
+        <div>
+          <h2 class="h2" id="revH">Ce spun oaspeții</h2>
+          <div class="score" style="margin-top:18px">
+            <b id="avg">5.0</b>
+            <div><span class="stars" aria-label="5 din 5 stele">★★★★★</span><small id="avgSub">din 5 recenzii selectate</small></div>
+          </div>
+        </div>
+        <div class="bars" id="bars" aria-label="Teme menționate în recenzii"></div>
+      </div>
+
+      <div class="car" id="car" role="region" aria-roledescription="carusel" aria-label="Momente din recenzii">
+        <div class="car-track" id="track"></div>
+        <div class="car-ctl">
+          <div class="dots" id="dots"></div>
+          <div class="arrows">
+            <button type="button" id="prev" aria-label="Momentul anterior">‹</button>
+            <button type="button" id="next" aria-label="Momentul următor">›</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="wall-head">
+        <h3>Toate recenziile</h3>
+        <div class="seg" id="revF" role="group" aria-label="Filtrează recenziile"></div>
+      </div>
+      <div class="wall" id="wall"></div>
+    </div>
+  </section>
+
+  <div class="zig" aria-hidden="true"></div>
+
+  <!-- VISIT -->
+  <section class="block" id="visit" aria-labelledby="visH">
+    <div class="wrap visit-grid">
+      <div>
+        <h2 class="h2" id="visH">Vino flămând</h2>
+        <p class="lede">Rezervă o masă pentru cină sau pentru o zi de naștere. Sau comandă acasă.</p>
+        <ul class="info">
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s7-6.2 7-11.5A7 7 0 0 0 5 9.5C5 14.8 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5"/></svg>
+            <div><b>Adresă</b><span id="addr"></span></div>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2Z"/></svg>
+            <div><b>Telefon</b><span id="phone"></span></div>
+          </li>
+        </ul>
+        <div class="cta-row">
+          <button class="btn btn-fire" data-open-resv type="button">Rezervă o masă</button>
+          <a class="btn btn-ghost" id="mapsLink" href="#" target="_blank" rel="noopener">Deschide în Google Maps</a>
+        </div>
+        <div class="deliver">
+          <p>Nu vii în seara asta? Comandă cu livrare.</p>
+          <div class="row">
+            <button class="btn btn-amber" type="button" data-partner="Straus">Comandă pe Straus</button>
+            <button class="btn btn-amber" type="button" data-partner="Foodhouse">Comandă pe Foodhouse</button>
+          </div>
+        </div>
+      </div>
+      <div class="map" role="img" aria-label="Schiță de hartă cu El Paso în Chișinău">
+        <svg viewBox="0 0 520 400" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+          <rect width="520" height="400" fill="#1c110e"/>
+          <path d="M-10 300 C 90 270, 140 340, 240 310 S 420 250, 540 300 L540 350 C 420 300, 330 370, 230 360 S 60 320, -10 350 Z" fill="#1d4d4a" opacity=".65"/>
+          <g fill="#2b1b17" stroke="#3a2520" stroke-width="2">
+            <rect x="24" y="24" width="110" height="80" rx="6"/><rect x="150" y="24" width="90" height="80" rx="6"/><rect x="258" y="24" width="120" height="80" rx="6"/><rect x="396" y="24" width="100" height="80" rx="6"/>
+            <rect x="24" y="122" width="70" height="90" rx="6"/><rect x="110" y="122" width="130" height="90" rx="6"/><rect x="330" y="122" width="80" height="90" rx="6"/><rect x="426" y="122" width="70" height="90" rx="6"/>
+            <rect x="24" y="230" width="150" height="46" rx="6"/><rect x="190" y="230" width="70" height="46" rx="6"/><rect x="330" y="230" width="166" height="40" rx="6"/>
+          </g>
+          <g stroke="#f4a261" stroke-opacity=".35" stroke-width="5" stroke-linecap="round" fill="none">
+            <path d="M0 112H520"/><path d="M0 220H520" stroke-opacity=".2"/><path d="M144 0V300"/><path d="M250 0V300" stroke-opacity=".55"/><path d="M386 0V300" stroke-opacity=".2"/>
+          </g>
+          <g transform="translate(250 112)">
+            <circle class="pulse" r="18" fill="#d9381e" opacity=".6"/>
+            <path d="M0 -8 C -26 -34, -26 -68, 0 -84 C 26 -68, 26 -34, 0 -8Z" fill="#d9381e" stroke="#f6e7d3" stroke-width="3"/>
+            <circle cy="-50" r="16" fill="#f6e7d3"/>
+            <text y="-43" text-anchor="middle" font-size="20">🌶️</text>
+          </g>
+        </svg>
+        <div class="cap"><span class="tag chef">Concept de hartă</span></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <span>© <span id="yr">2026</span> El Paso, Chișinău. Restaurant mexican &amp; bar.</span>
+    <span>Nachos cu salsa sunt din partea casei.</span>
+  </div>
+</footer>
+
+<!-- Order drawer -->
+<div class="veil" id="veil"></div>
+<aside class="drawer" id="drawer" role="dialog" aria-modal="true" aria-labelledby="drH">
+  <div class="dr-head">
+    <h2 id="drH">Comanda ta</h2>
+    <button class="x" id="drClose" type="button" aria-label="Închide comanda">✕</button>
+  </div>
+  <div class="dr-list" id="drList"></div>
+  <div class="dr-foot" id="drFoot"></div>
+</aside>
+
+<!-- Reservation dialog -->
+<dialog id="resv" aria-labelledby="rH">
+  <div class="dlg-in" id="resvForm">
+    <div class="dlg-top">
+      <h2 id="rH">Rezervă o masă</h2>
+      <button class="x" type="button" data-close aria-label="Închide">✕</button>
+    </div>
+    <form class="form" id="rf" novalidate>
+      <div class="f"><label for="rName">Numele tău</label><input id="rName" name="name" autocomplete="name" required><span class="err" data-err></span></div>
+      <div class="f"><label for="rPhone">Telefon</label><input id="rPhone" name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="+373 …" required><span class="err" data-err></span></div>
+      <div class="f"><label for="rDate">Data</label><input id="rDate" name="date" type="date" required><span class="err" data-err></span></div>
+      <div class="f"><label for="rTime">Ora</label><select id="rTime" name="time" required></select><span class="err" data-err></span></div>
+      <div class="f full">
+        <label id="gLbl">Număr de persoane</label>
+        <div class="step" role="group" aria-labelledby="gLbl">
+          <button type="button" id="gMinus" aria-label="O persoană mai puțin">−</button>
+          <output id="gOut" for="gMinus gPlus">2</output>
+          <button type="button" id="gPlus" aria-label="O persoană în plus">+</button>
+        </div>
+      </div>
+      <div class="f full"><label for="rNote">Cerințe speciale</label><textarea id="rNote" name="note" placeholder="Scaun pentru copii, colț liniștit, alergii…"></textarea></div>
+      <div class="note"><span aria-hidden="true">🎂</span><span>Sărbătorești o zi de naștere? Menționează mai sus și anunță-ne din timp dacă aduci tort, ca să ne pregătim.</span></div>
+      <div class="f full"><button class="btn btn-fire" type="submit">Trimite cererea de rezervare</button></div>
+    </form>
+  </div>
+  <div class="dlg-in ok" id="resvOk" hidden>
+    <div class="big" aria-hidden="true">🎉</div>
+    <h2>Cerere primită</h2>
+    <p id="okMsg"></p>
+    <button class="btn btn-fire" type="button" data-close>Gata</button>
+  </div>
+</dialog>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script>
+(() => {
+'use strict';
+
+/* ============================================================
+   CONFIG – edit these before going live
+   ============================================================ */
+const CONFIG = {
+  address: 'Chișinău, Moldova',            // add the street address
+  phone: '',                               // e.g. '+373 22 000 000'
+  mapsQuery: 'El Paso Mexican restaurant Chișinău',
+  delivery: { Straus: '', Foodhouse: '' }, // paste the partner page URLs
+  slots: { open: '12:00', close: '22:00', stepMin: 30 }
+};
+
+/* ============================================================
+   DATA
+   spice: 0–3 · g: grammage string (e.g. '250 g'), shown when set
+   ============================================================ */
+const CATS = [
+  { id: 'recommended', label: '⭐ Recomandări' },
+  { id: 'appetizers',  label: 'Gustări & nachos' },
+  { id: 'tacos',       label: 'Tacos & burritos' },
+  { id: 'fajitas',     label: 'Fajitas' },
+  { id: 'mains',       label: 'Feluri principale' },
+  { id: 'salads',      label: 'Salate' },
+  { id: 'soups',       label: 'Supe' },
+  { id: 'desserts',    label: 'Deserturi' },
+  { id: 'drinks',      label: 'Băuturi' }
+];
+const SUBS = [['all','Toate'],['beef','Vită'],['pork','Porc'],['chicken','Pui'],['fish','Pește']];
+
+const MENU = [
+  { id:'nachos', cat:'appetizers', emoji:'🌽', name:'Nachos cu salsa', desc:'Un coș de bun venit cu nachos și salsa noastră de casă. Ajunge când te așezi la masă.', free:true, spice:1, veg:true, rec:true },
+  { id:'guac', cat:'appetizers', emoji:'🥑', name:'Guacamole cu nachos', desc:'Pastă proaspătă de avocado cu roșii și ceapă, servită cu nachos.', price:135, spice:0, veg:true, g:null },
+  { id:'ceviche', cat:'appetizers', emoji:'🐟', name:'Ceviche de somon', desc:'Somon marinat în stil mexican clasic.', price:135, spice:1 },
+  { id:'plateau', cat:'appetizers', emoji:'🍤', name:'Platou mexican', desc:'Creveți, somon, avocado și porumb, cu salsa fresca și nachos cu brânză.', price:265, spice:1, chef:true, rec:true },
+
+  { id:'tacos', cat:'tacos', emoji:'🌮', name:'Tacos cu porumb (tacos con maíz)', desc:'Tacos din tortilla de porumb. Alege umplutura.', spice:1,
+    variants:[{l:'Pui',p:145},{l:'Vită',p:155},{l:'Creveți',p:185},{l:'Vegetarian',p:135,veg:true}] },
+  { id:'quesa', cat:'tacos', emoji:'🧀', name:'Quesadilla', desc:'Tortilla la grătar cu brânză topită. Alege umplutura.', spice:0, rec:true,
+    variants:[{l:'Pui',p:145},{l:'Vită',p:155},{l:'Ciuperci',p:135,veg:true},{l:'Somon',p:180}] },
+  { id:'burrito', cat:'tacos', emoji:'🌯', name:'Burrito cu vită și cașcaval', desc:'Burrito mare cu vită și cașcaval.', price:135, spice:1 },
+
+  { id:'faj-chicken', cat:'fajitas', emoji:'🔥', name:'Fajitas cu pui', desc:'Servită pe tigaie încinsă și flambată la masă.', price:195, spice:1, chef:true, flambe:true, rec:true },
+  { id:'faj-lamb', cat:'fajitas', emoji:'🔥', name:'Fajitas cu carne de miel', desc:'Fajitas cu miel, pe tigaie încinsă, flambate la masă.', price:265, spice:1, chef:true, flambe:true },
+  { id:'faj-salmon', cat:'fajitas', emoji:'🔥', name:'Fajitas cu somon', desc:'Fajitas cu somon, pe tigaie încinsă, flambate la masă.', price:295, spice:1, chef:true, flambe:true },
+  { id:'faj-mixed', cat:'fajitas', emoji:'🔥', name:'Fajitas mixtă', desc:'Un mix de umpluturi pe aceeași tigaie încinsă, flambat la masă.', price:280, spice:1, chef:true, flambe:true, rec:true },
+
+  { id:'mega', cat:'mains', emoji:'🥩', name:'„Mega Grill” din carne', desc:'Selecție mixtă de carne la grătar, cu garnitură.', price:425, spice:3, chef:true, rec:true, sub:[] },
+  { id:'filete', cat:'mains', emoji:'🥩', name:'File de vită „El Paso”', desc:'Mușchi de vită copt cu brânză topită, orez condimentat și legume înăbușite.', price:265, spice:2, chef:true, rec:true, sub:['beef'] },
+
+  { id:'salad-salmon', cat:'salads', emoji:'🥗', name:'Salată caldă cu somon', desc:'Somon la grătar, avocado, nachos, parmezan, rucola și roșii.', price:155, spice:0 },
+  { id:'salad-taco', cat:'salads', emoji:'🥗', name:'Salată taco', desc:'Varianta noastră de salată taco.', price:125, spice:1 },
+
+  { id:'soup-chicken', cat:'soups', emoji:'🍲', name:'Supă picantă de pui cu tortilla', desc:'Sopa de pollo: supă picantă de pui, servită cu tortilla.', price:85, spice:2 },
+  { id:'soup-bean', cat:'soups', emoji:'🍲', name:'Supă mexicană de fasole cu curcan', desc:'O supă consistentă de fasole, cu curcan.', price:95, spice:1 },
+
+  { id:'ice', cat:'desserts', emoji:'🍨', name:'Înghețată prăjită mexicană', desc:'Înghețată prăjită, servită cu ciocolată caldă sau cu miere și frișcă.', price:85, spice:0, veg:true, rec:true },
+  { id:'cielito', cat:'desserts', emoji:'🍎', name:'Cielito Lindo', desc:'Burrito desert cu mere, stafide, nuci, înghețată și frișcă.', price:75, spice:0, veg:true }
+];
+
+const REVIEWS = [
+  { who:'Raluk Mad', text:'Am îndrăgit locul de la prima vedere! Locul arată exact ca în Texas! Mâncarea și servirea merită 12 puncte din 10! Chelnerii sunt incredibili!', tags:['atmosphere','food','service'], color:'#d9381e' },
+  { who:'Alex Nick', text:'Mâncarea este splendidă, mereu proaspătă și plină de aromă. Fiecare masă începe cu cipuri de nachos din partea casei. Fajitas sunt flambate chiar în fața ta!', tags:['food'], color:'#2a9d8f' },
+  { who:'Inna Mudryk', text:'Unul dintre cele mai frumoase locuri din oraș. Are un suflet aparte. Atmosfera este caldă și unică, iar meniul este imens. Personalul este super prietenos.', tags:['atmosphere','service'], color:'#e76f51' },
+  { who:'sofia&nikita reviews', text:'Atmosfera restaurantului este foarte frumoasă, ornamentele mexicane și picturile adaugă mult la experiență. Am comandat burritos și tacos și am primit nachos din partea casei!', tags:['atmosphere','food'], color:'#8a4a8f' },
+  { who:'Ruslan Irmanov', text:'Mâncarea mexicană este mereu delicioasă, iar El Paso nu este o excepție. Mâncare excelentă, atmosferă grozavă și prețuri care satisfac orice client.', tags:['food','atmosphere'], color:'#3a6fb0' }
+];
+const THEMES = { food:'Mâncare', service:'Servire', atmosphere:'Atmosferă' };
+
+const HIGHLIGHTS = [
+  { theme:'Nachos cu salsa din partea casei', quote:'Fiecare masă începe cu cipuri de nachos din partea casei.', who:'Alex Nick' },
+  { theme:'Personal amabil și ospitalier', quote:'Chelnerii sunt incredibili!', who:'Raluk Mad' },
+  { theme:'Atmosferă caldă, ornamente mexicane și picturi deosebite', quote:'Atmosfera restaurantului este foarte frumoasă, ornamentele mexicane și picturile adaugă mult la experiență.', who:'sofia&nikita reviews' },
+  { theme:'Spectacolul de flambare al fajitas-ului', quote:'Fajitas sunt flambate chiar în fața ta!', who:'Alex Nick' }
+];
+
+/* ============================================================
+   Helpers
+   ============================================================ */
+const $  = (s, r = document) => r.querySelector(s);
+const $$ = (s, r = document) => [...r.querySelectorAll(s)];
+const money = n => String(n).replace(/\B(?=(\d{3})+(?!\d))/g, ' ') + ' MDL';
+const byId = id => MENU.find(m => m.id === id);
+const esc = s => String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+let toastT;
+function toast(msg) {
+  const t = $('#toast'); t.textContent = msg; t.classList.add('on');
+  clearTimeout(toastT); toastT = setTimeout(() => t.classList.remove('on'), 2400);
+}
+const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+/* ============================================================
+   Papel picado bunting
+   ============================================================ */
+function buildBunting() {
+  const svg = $('#bunting');
+  const w = Math.max(innerWidth, 320), fw = 56, gap = 14, n = Math.ceil(w / (fw + gap)) + 1;
+  const sag = 22, colors = ['#d9381e','#f4a261','#2a9d8f','#e63946','#e76f51','#f6e7d3'];
+  const flag = 'M0 0H56V62L49 70L42 62L35 70L28 62L21 70L14 62L7 70L0 62Z' +
+    'M28 14L37 24L28 34L19 24Z M10 46a3 3 0 1 0 6 0a3 3 0 1 0 -6 0Z M40 46a3 3 0 1 0 6 0a3 3 0 1 0 -6 0Z M25 48h6v8h-6Z M8 8h8v4h-8Z M40 8h8v4h-8Z';
+  let out = `<path d="M0 4 Q ${w / 2} ${4 + sag * 2} ${w} 4" fill="none" stroke="#f6e7d3" stroke-opacity=".6" stroke-width="2"/>`;
+  for (let i = 0; i < n; i++) {
+    const x = i * (fw + gap) + gap / 2, t = Math.min(1, (x + fw / 2) / w);
+    const y = 4 + 4 * sag * t * (1 - t) + 2;
+    out += `<g transform="translate(${x.toFixed(1)} ${y.toFixed(1)})"><g class="flag" style="animation-delay:${(-(i % 7) * .45).toFixed(2)}s"><path d="${flag}" fill="${colors[i % colors.length]}" fill-rule="evenodd"/></g></g>`;
+  }
+  svg.setAttribute('viewBox', `0 0 ${w} 112`);
+  svg.setAttribute('preserveAspectRatio', 'xMinYMin slice');
+  svg.innerHTML = out;
+}
+let rz; addEventListener('resize', () => { clearTimeout(rz); rz = setTimeout(buildBunting, 150); });
+
+/* ============================================================
+   Menu
+   ============================================================ */
+const state = { cat: 'recommended', spice: 0, veg: false, chef: false, sub: 'all', vsel: {} };
+
+function variantList(it) {
+  if (!it.variants) return [];
+  return it.variants.map((v, i) => ({ ...v, i })).filter(v => !state.veg || v.veg);
+}
+function currentVariant(it) {
+  const list = variantList(it);
+  if (!list.length) return null;
+  const want = state.vsel[it.id];
+  return list.find(v => v.i === want) || list[0];
+}
+function isVeg(it) { return it.veg || (it.variants && it.variants.some(v => v.veg)); }
+
+function visible() {
+  return MENU.filter(it => {
+    if (state.cat === 'recommended' ? !it.rec : it.cat !== state.cat) return false;
+    if (state.spice && (it.spice || 0) < state.spice) return false;
+    if (state.veg && !isVeg(it)) return false;
+    if (state.chef && !it.chef) return false;
+    if (state.cat === 'mains' && state.sub !== 'all' && !(it.sub || []).includes(state.sub)) return false;
+    return true;
+  });
+}
+
+function chilis(n) {
+  if (!n) return '<span class="mild">Fără picant</span>';
+  const label = `Nivel de picant ${n} din 3`;
+  return `<span class="chilis" role="img" aria-label="${label}">${'🌶️'.repeat(n)}${n < 3 ? '<span class="off">' + '🌶️'.repeat(3 - n) + '</span>' : ''}</span>`;
+}
+
+function cardHTML(it) {
+  const v = currentVariant(it);
+  const list = variantList(it);
+  const price = it.free ? '' : (v ? v.p : it.price);
+  const tags = [
+    it.free ? '<span class="tag gift">Din partea casei</span>' : '',
+    isVeg(it) ? '<span class="tag veg">Vegetarian</span>' : '',
+    it.chef ? '<span class="tag chef">Specialitatea bucătarului</span>' : '',
+    it.flambe ? '<span class="tag flame">Flambat</span>' : ''
+  ].join('');
+  const vars = list.length ? `<div class="vars" role="group" aria-label="Umplutură pentru ${esc(it.name)}">${
+    list.map(x => `<button type="button" data-v="${it.id}" data-i="${x.i}" aria-pressed="${v && v.i === x.i}">${x.l}</button>`).join('')}</div>` : '';
+  const foot = it.free
+    ? `<span class="price free">Gratuit la sosire</span>`
+    : `<span class="price" data-price>${money(price)}</span><button class="btn btn-fire add" type="button" data-add="${it.id}" aria-label="Adaugă ${esc(it.name)} în comandă">Adaugă în comandă</button>`;
+  return `<article class="dish" data-id="${it.id}">
+    <div class="tile t-${it.cat}" aria-hidden="true"><span>${it.emoji}</span></div>
+    <div class="dish-body">
+      <h3>${esc(it.name)}</h3>
+      <p class="desc">${esc(it.desc)}</p>
+      <div class="tags">${chilis(it.spice)}${tags}</div>
+      ${vars}
+      ${it.g ? `<span class="gram">${esc(it.g)}</span>` : ''}
+      <div class="dish-foot">${foot}</div>
+    </div>
+  </article>`;
+}
+
+function renderTabs() {
+  $('#tabs').innerHTML = CATS.map(c => `<button class="tab" type="button" data-cat="${c.id}" aria-pressed="${state.cat === c.id}">${c.label}</button>`).join('');
+  $('#spice').innerHTML = [[0,'Orice'],[1,'🌶️'],[2,'🌶️🌶️'],[3,'🌶️🌶️🌶️']].map(([n, l]) =>
+    `<button type="button" data-spice="${n}" aria-pressed="${state.spice === n}" aria-label="${n ? 'Nivel de picant ' + n + ' sau mai iute' : 'Orice nivel de picant'}">${l}</button>`).join('');
+  $('#fVeg').setAttribute('aria-pressed', state.veg);
+  $('#fChef').setAttribute('aria-pressed', state.chef);
+  const subs = $('#subs');
+  subs.hidden = state.cat !== 'mains';
+  if (state.cat === 'mains') {
+    subs.innerHTML = SUBS.map(([id, l]) => {
+      const n = id === 'all' ? MENU.filter(m => m.cat === 'mains').length : MENU.filter(m => m.cat === 'mains' && (m.sub || []).includes(id)).length;
+      return `<button type="button" data-sub="${id}" aria-pressed="${state.sub === id}" ${n ? '' : 'disabled title="Niciun preparat în această grupă încă"'}>${l} (${n})</button>`;
+    }).join('');
+  }
+}
+
+function renderGrid() {
+  const items = visible();
+  const grid = $('#grid');
+  if (!items.length) {
+    const drinks = state.cat === 'drinks';
+    grid.innerHTML = `<div class="empty"><div style="font-size:44px" aria-hidden="true">${drinks ? '🍹' : '🌵'}</div>
+      <h3>${drinks ? 'Lista barului nu este încă online' : 'Niciun preparat nu se potrivește'}</h3>
+      <p>${drinks ? 'Cere meniul barului de la ospătar sau rezervă o masă și comandă o băutură la nachos.' : 'Încearcă alt nivel de picant sau dezactivează un filtru.'}</p>
+      ${drinks ? '<button class="btn btn-fire" type="button" data-open-resv>Rezervă o masă</button>' : '<button class="btn btn-ghost" type="button" data-clear>Șterge filtrele</button>'}</div>`;
+    $('#count').textContent = '';
+  } else {
+    grid.innerHTML = items.map(cardHTML).join('');
+    $('#count').textContent = `${items.length} ${items.length === 1 ? 'preparat' : 'preparate'}`;
+  }
+}
+function renderMenu() { renderTabs(); renderGrid(); }
+
+$('#tabs').addEventListener('click', e => {
+  const b = e.target.closest('[data-cat]'); if (!b) return;
+  state.cat = b.dataset.cat; state.sub = 'all'; renderMenu();
+  b.scrollIntoView({ inline: 'center', block: 'nearest', behavior: reduce ? 'auto' : 'smooth' });
+});
+$('#spice').addEventListener('click', e => {
+  const b = e.target.closest('[data-spice]'); if (!b) return;
+  state.spice = +b.dataset.spice; renderMenu();
+});
+$('#fVeg').addEventListener('click', () => { state.veg = !state.veg; renderMenu(); });
+$('#fChef').addEventListener('click', () => { state.chef = !state.chef; renderMenu(); });
+$('#subs').addEventListener('click', e => {
+  const b = e.target.closest('[data-sub]'); if (!b || b.disabled) return;
+  state.sub = b.dataset.sub; renderMenu();
+});
+$('#grid').addEventListener('click', e => {
+  const v = e.target.closest('[data-v]');
+  if (v) {
+    state.vsel[v.dataset.v] = +v.dataset.i;
+    const card = v.closest('.dish'), it = byId(v.dataset.v), cur = currentVariant(it);
+    $$('[data-v]', card).forEach(x => x.setAttribute('aria-pressed', +x.dataset.i === cur.i));
+    $('[data-price]', card).textContent = money(cur.p);
+    return;
+  }
+  const a = e.target.closest('[data-add]');
+  if (a) { addToCart(a.dataset.add); a.classList.add('added'); a.textContent = 'Adăugat'; setTimeout(() => { a.classList.remove('added'); a.textContent = 'Adaugă în comandă'; }, 900); return; }
+  if (e.target.closest('[data-clear]')) { state.spice = 0; state.veg = false; state.chef = false; state.sub = 'all'; renderMenu(); }
+});
+
+function goCategory(id) {
+  state.cat = id; state.sub = 'all'; state.spice = 0; state.veg = false; state.chef = false; renderMenu();
+  $('#menu').scrollIntoView({ behavior: reduce ? 'auto' : 'smooth' });
+}
+
+/* ============================================================
+   Cart
+   ============================================================ */
+let cart = {};
+try { cart = JSON.parse(localStorage.getItem('elpaso.cart') || '{}') || {}; } catch (_) { cart = {}; }
+const save = () => { try { localStorage.setItem('elpaso.cart', JSON.stringify(cart)); } catch (_) {} };
+
+function lineInfo(key) {
+  const [id, vi] = key.split(':'); const it = byId(id); if (!it) return null;
+  const v = it.variants ? it.variants[+vi] : null;
+  return { key, it, v, name: it.name + (v ? ` (${v.l})` : ''), price: v ? v.p : it.price, qty: cart[key] };
+}
+function lines() { return Object.keys(cart).map(lineInfo).filter(Boolean); }
+function total() { return lines().reduce((s, l) => s + l.price * l.qty, 0); }
+function count() { return lines().reduce((s, l) => s + l.qty, 0); }
+
+function addToCart(id) {
+  const it = byId(id); const v = currentVariant(it);
+  const key = `${id}:${v ? v.i : 0}`;
+  cart[key] = (cart[key] || 0) + 1; save(); updateCart();
+  toast(`${it.name}${v ? ' (' + v.l + ')' : ''} – adăugat`);
+}
+function updateCart() {
+  const n = count(), b = $('#cartCount');
+  b.textContent = n; b.classList.toggle('on', n > 0);
+  if ($('#drawer').classList.contains('on')) renderDrawer();
+}
+function renderDrawer() {
+  const ls = lines(), list = $('#drList'), foot = $('#drFoot');
+  if (!ls.length) {
+    list.innerHTML = `<div class="dr-empty"><div style="font-size:44px" aria-hidden="true">🌮</div><p>Comanda ta este goală. Adaugă preparate din meniu.</p><button class="btn btn-fire" type="button" id="drBrowse">Vezi meniul</button></div>`;
+    foot.innerHTML = ''; foot.hidden = true; return;
+  }
+  foot.hidden = false;
+  list.innerHTML = ls.map(l => `<div class="line">
+    <div><b>${esc(l.name)}</b><small>${money(l.price)} bucata</small>
+      <div class="qty"><button type="button" data-q="-1" data-k="${l.key}" aria-label="Scoate una: ${esc(l.name)}">−</button><output>${l.qty}</output><button type="button" data-q="1" data-k="${l.key}" aria-label="Adaugă una: ${esc(l.name)}">+</button></div></div>
+    <div class="lp">${money(l.price * l.qty)}</div>
+    <span></span><button class="rm" type="button" data-rm="${l.key}">Elimină</button></div>`).join('');
+  foot.innerHTML = `<div class="total"><span>Total</span><span>${money(total())}</span></div>
+    <button class="btn btn-amber" type="button" data-partner="Straus">Comandă pe Straus</button>
+    <button class="btn btn-amber" type="button" data-partner="Foodhouse">Comandă pe Foodhouse</button>
+    <button class="btn btn-ghost" type="button" id="copyOrder">Copiază comanda</button>
+    <p class="dr-note">Partenerii de livrare au propriul formular de comandă. Copiază lista ca să compui aceeași comandă acolo.</p>`;
+}
+let lastFocus = null;
+function openDrawer() {
+  lastFocus = document.activeElement; renderDrawer();
+  $('#drawer').classList.add('on'); $('#veil').classList.add('on');
+  setTimeout(() => $('#drClose').focus(), 50);
+}
+function closeDrawer() {
+  $('#drawer').classList.remove('on'); $('#veil').classList.remove('on');
+  if (lastFocus && lastFocus.focus) lastFocus.focus();
+}
+$('#cartBtn').addEventListener('click', openDrawer);
+$('#drClose').addEventListener('click', closeDrawer);
+$('#veil').addEventListener('click', closeDrawer);
+$('#drawer').addEventListener('click', e => {
+  const q = e.target.closest('[data-q]');
+  if (q) { const k = q.dataset.k; cart[k] = (cart[k] || 0) + +q.dataset.q; if (cart[k] <= 0) delete cart[k]; save(); updateCart(); return; }
+  const r = e.target.closest('[data-rm]');
+  if (r) { delete cart[r.dataset.rm]; save(); updateCart(); return; }
+  if (e.target.closest('#drBrowse')) { closeDrawer(); goCategory('recommended'); return; }
+  if (e.target.closest('#copyOrder')) copyOrder();
+});
+function orderText() {
+  return 'Comanda mea El Paso:\n' + lines().map(l => `${l.qty} × ${l.name} – ${money(l.price * l.qty)}`).join('\n') + `\nTotal: ${money(total())}`;
+}
+async function copyOrder() {
+  const text = orderText();
+  try { await navigator.clipboard.writeText(text); toast('Comanda a fost copiată'); }
+  catch (_) {
+    const ta = document.createElement('textarea'); ta.value = text; ta.style.position = 'fixed'; ta.style.opacity = '0';
+    document.body.appendChild(ta); ta.select();
+    let ok = false; try { ok = document.execCommand('copy'); } catch (__) {}
+    ta.remove(); toast(ok ? 'Comanda a fost copiată' : 'Copierea a eșuat. Selectează lista și copiaz-o manual.');
+  }
+}
+function openPartner(name) {
+  const url = CONFIG.delivery[name];
+  if (url) window.open(url, '_blank', 'noopener'); else toast(`Linkul ${name} nu este configurat încă.`);
+}
+document.addEventListener('click', e => {
+  const p = e.target.closest('[data-partner]'); if (p) openPartner(p.dataset.partner);
+  if (e.target.closest('[data-open-resv]')) openResv();
+});
+
+/* ============================================================
+   Flambé
+   ============================================================ */
+const flSec = $('#flambe'), lightBtn = $('#lightBtn');
+function setLit(on) {
+  flSec.classList.toggle('lit', on);
+  lightBtn.setAttribute('aria-pressed', on);
+  lightBtn.textContent = on ? 'Stinge focul' : 'Aprinde tigaia';
+}
+lightBtn.addEventListener('click', () => setLit(!flSec.classList.contains('lit')));
+$('#pan').addEventListener('click', () => setLit(!flSec.classList.contains('lit')));
+$('#goFaj').addEventListener('click', () => goCategory('fajitas'));
+$('#fajFrom').textContent = money(Math.min(...MENU.filter(m => m.cat === 'fajitas').map(m => m.price)));
+if ('IntersectionObserver' in window) {
+  const io = new IntersectionObserver(es => { if (es[0].isIntersecting) { setTimeout(() => setLit(true), 350); io.disconnect(); } }, { threshold: .45 });
+  io.observe($('#pan'));
+}
+
+/* ============================================================
+   Reviews
+   ============================================================ */
+const stars = '★★★★★';
+function renderStats() {
+  $('#avg').textContent = '5.0';
+  $('#avgSub').textContent = `din ${REVIEWS.length} recenzii selectate`;
+  $('#bars').innerHTML = Object.entries(THEMES).map(([k, label]) => {
+    const n = REVIEWS.filter(r => r.tags.includes(k)).length;
+    return `<div class="bar"><span>${label}</span><i style="--w:${(n / REVIEWS.length) * 100}%"></i><em>${n} din ${REVIEWS.length}</em></div>`;
+  }).join('');
+}
+let revFilter = 'all';
+function renderWall() {
+  $('#revF').innerHTML = [['all','Toate'], ...Object.entries(THEMES)].map(([k, l]) =>
+    `<button type="button" data-f="${k}" aria-pressed="${revFilter === k}">${l}</button>`).join('');
+  const list = REVIEWS.filter(r => revFilter === 'all' || r.tags.includes(revFilter));
+  $('#wall').innerHTML = list.map(r => `<article class="rev">
+    <div class="rev-h"><span class="av" style="background:${r.color}" aria-hidden="true">${esc(r.who[0].toUpperCase())}</span>
+      <div><b>${esc(r.who)}</b><span class="stars" role="img" aria-label="5 din 5 stele">${stars}</span></div></div>
+    <p>${esc(r.text)}</p>${r.tr ? `<p class="tr">${esc(r.tr)}</p>` : ''}
+    <div class="rev-tags">${r.tags.map(t => `<span>${THEMES[t]}</span>`).join('')}</div></article>`).join('');
+}
+$('#revF').addEventListener('click', e => { const b = e.target.closest('[data-f]'); if (b) { revFilter = b.dataset.f; renderWall(); } });
+
+/* carousel */
+let ci = 0, timer;
+function buildCarousel() {
+  $('#track').innerHTML = HIGHLIGHTS.map((h, i) => `<div class="slide" role="group" aria-roledescription="diapozitiv" aria-label="${i + 1} din ${HIGHLIGHTS.length}">
+    <h3>${esc(h.theme)}</h3>
+    <blockquote>“${esc(h.quote)}”</blockquote>
+    ${h.tr ? `<p class="tr">${esc(h.tr)}</p>` : ''}
+    <div class="who"><span class="stars" aria-label="5 din 5 stele">${stars}</span><span>${esc(h.who)}</span></div></div>`).join('');
+  $('#dots').innerHTML = HIGHLIGHTS.map((_, i) => `<button type="button" data-d="${i}" aria-label="Arată momentul ${i + 1}"></button>`).join('');
+}
+function goSlide(i) {
+  ci = (i + HIGHLIGHTS.length) % HIGHLIGHTS.length;
+  $('#track').style.transform = `translateX(-${ci * 100}%)`;
+  $$('#dots button').forEach((b, k) => b.setAttribute('aria-current', k === ci));
+  $$('.slide').forEach((s, k) => s.setAttribute('aria-hidden', k !== ci));
+}
+function play() { if (reduce) return; stop(); timer = setInterval(() => goSlide(ci + 1), 6500); }
+function stop() { clearInterval(timer); }
+$('#prev').addEventListener('click', () => { goSlide(ci - 1); play(); });
+$('#next').addEventListener('click', () => { goSlide(ci + 1); play(); });
+$('#dots').addEventListener('click', e => { const b = e.target.closest('[data-d]'); if (b) { goSlide(+b.dataset.d); play(); } });
+const car = $('#car');
+car.addEventListener('mouseenter', stop); car.addEventListener('mouseleave', play);
+car.addEventListener('focusin', stop); car.addEventListener('focusout', play);
+let sx = null;
+car.addEventListener('pointerdown', e => { sx = e.clientX; });
+car.addEventListener('pointerup', e => {
+  if (sx === null) return; const d = e.clientX - sx; sx = null;
+  if (Math.abs(d) > 45) { goSlide(ci + (d < 0 ? 1 : -1)); play(); }
+});
+car.addEventListener('pointercancel', () => { sx = null; });
+
+/* ============================================================
+   Reservation
+   ============================================================ */
+const dlg = $('#resv'), rf = $('#rf');
+let guests = 2;
+function buildTimes() {
+  const [oh, om] = CONFIG.slots.open.split(':').map(Number), [ch, cm] = CONFIG.slots.close.split(':').map(Number);
+  let m = oh * 60 + om; const end = ch * 60 + cm, opts = ['<option value="">Alege ora</option>'];
+  for (; m <= end; m += CONFIG.slots.stepMin) {
+    const t = `${String(Math.floor(m / 60)).padStart(2, '0')}:${String(m % 60).padStart(2, '0')}`;
+    opts.push(`<option>${t}</option>`);
+  }
+  $('#rTime').innerHTML = opts.join('');
+}
+function todayStr() { const d = new Date(); return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`; }
+function setGuests(n) { guests = Math.min(20, Math.max(1, n)); $('#gOut').textContent = guests; }
+function openResv() {
+  if ($('#drawer').classList.contains('on')) closeDrawer();
+  $('#resvForm').hidden = false; $('#resvOk').hidden = true;
+  $('#rDate').min = todayStr(); if (!$('#rDate').value) $('#rDate').value = todayStr();
+  if (typeof dlg.showModal === 'function') { if (!dlg.open) dlg.showModal(); } else dlg.setAttribute('open', '');
+  setTimeout(() => $('#rName').focus(), 60);
+}
+function closeResv() { if (dlg.open) dlg.close(); }
+$('#gMinus').addEventListener('click', () => setGuests(guests - 1));
+$('#gPlus').addEventListener('click', () => setGuests(guests + 1));
+dlg.addEventListener('click', e => { if (e.target === dlg || e.target.closest('[data-close]')) closeResv(); });
+
+function fieldErr(input, msg) {
+  const f = input.closest('.f'); f.classList.toggle('bad', !!msg);
+  $('[data-err]', f).textContent = msg || '';
+  input.setAttribute('aria-invalid', !!msg);
+  return !msg;
+}
+/* Replace with a real call (fetch to your backend, WhatsApp, e-mail…) */
+async function submitReservation(data) { return { ok: true, data }; }
+
+rf.addEventListener('submit', async e => {
+  e.preventDefault();
+  const name = $('#rName'), phone = $('#rPhone'), date = $('#rDate'), time = $('#rTime');
+  const okName = fieldErr(name, name.value.trim().length < 2 ? 'Introdu numele.' : '');
+  const okPhone = fieldErr(phone, phone.value.replace(/\D/g, '').length < 6 ? 'Introdu un număr de telefon la care te putem suna.' : '');
+  const okDate = fieldErr(date, !date.value ? 'Alege data.' : (date.value < todayStr() ? 'Alege azi sau o dată ulterioară.' : ''));
+  const okTime = fieldErr(time, !time.value ? 'Alege ora.' : '');
+  if (!(okName && okPhone && okDate && okTime)) { [name, phone, date, time].find(i => i.getAttribute('aria-invalid') === 'true').focus(); return; }
+  const data = { name: name.value.trim(), phone: phone.value.trim(), date: date.value, time: time.value, guests, note: $('#rNote').value.trim() };
+  const res = await submitReservation(data);
+  if (!res.ok) { toast('Ceva nu a mers. Sună-ne pentru a rezerva.'); return; }
+  const d = new Date(data.date + 'T00:00:00');
+  const nice = d.toLocaleDateString('ro-RO', { weekday: 'long', day: 'numeric', month: 'long' });
+  $('#okMsg').textContent = `Mulțumim, ${data.name}. Masă pentru ${data.guests} ${data.guests === 1 ? 'persoană' : 'persoane'}, ${nice}, la ora ${data.time}. Te vom contacta telefonic pentru confirmare.`;
+  $('#resvForm').hidden = true; $('#resvOk').hidden = false; rf.reset(); setGuests(2);
+  $$('.f', rf).forEach(f => f.classList.remove('bad'));
+});
+
+/* ============================================================
+   Visit + nav + global keys
+   ============================================================ */
+function initVisit() {
+  $('#addr').textContent = CONFIG.address;
+  const p = $('#phone');
+  if (CONFIG.phone) { const a = document.createElement('a'); a.href = 'tel:' + CONFIG.phone.replace(/[^\d+]/g, ''); a.textContent = CONFIG.phone; p.appendChild(a); }
+  else { p.className = 'todo'; p.textContent = 'Numărul de telefon va fi adăugat în curând.'; }
+  $('#mapsLink').href = 'https://www.google.com/maps/search/?api=1&query=' + encodeURIComponent(CONFIG.mapsQuery);
+  $('#yr').textContent = new Date().getFullYear();
+}
+$('#burger').addEventListener('click', () => {
+  const nav = $('#nav'), on = nav.classList.toggle('on'); $('#burger').setAttribute('aria-expanded', on);
+});
+$('#nav').addEventListener('click', e => { if (e.target.closest('a')) { $('#nav').classList.remove('on'); $('#burger').setAttribute('aria-expanded', 'false'); } });
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape') { if ($('#drawer').classList.contains('on')) closeDrawer(); $('#nav').classList.remove('on'); }
+});
+
+/* ---------- init ---------- */
+buildBunting(); renderMenu(); updateCart(); renderStats(); renderWall(); buildCarousel(); goSlide(0); play();
+buildTimes(); initVisit();
+})();
+</script>
+</body>
+</html>
